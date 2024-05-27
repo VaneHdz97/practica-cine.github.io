@@ -1,0 +1,100 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} /*Fuente del texto para toda la página y un box para asegurar el padding y borde*/
+
+body {
+    background-color:aliceblue;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Estilos para el encabezado*/
+.header {
+    background-color: #15344877;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 1.5rem;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+.header nav{
+    height: 20px;
+    background-color:  whitesmoke;
+    word-spacing: 20px;
+    padding: 20px;
+    word-spacing: 20px;
+    border-radius: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    
+}
+a:hover{
+      background-color: #f03030;
+      border-radius: 5px;
+       padding: 10px;
+}
+a:active{
+    color: whitesmoke;
+}
+.productos{
+    text-align: center;
+    font-size: 2rem;
+    color: red;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap; /*Permite que los elementos se ajusten en pantallas más peqieñas*/
+    justify-content: space-between; /*Espaciado entre elementos*/
+    text-align: center;
+    align-content: space-between;/*Espacio igual entre lineas*/
+}
+.food-item {
+    background: #f03030;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(140, 13, 13, 0.1);
+    outline: 22px solid transparent; /*Define un contorno para resaltar los elementos*/
+    position: relative; /*Posicionamiento relativo para colocar los elementos dentro del documento*/
+    overflow: hidden; /*esconde el contenido que se desborde fuera del contenedor*/
+    opacity: 0.95;/*Opacidad de lar cards*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 1; /*Los elementos se encojeran si es necesario*/
+    flex-basis: auto; /*define el tamaño inicial antes que se distribuyan*/
+}
+.food-item img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+.food-item h3 {
+    color: yellow;
+    margin-top: 0;
+}
+
+.food-item p {
+    color: yellow;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .food-item {
+        width: 48%;
+    }
+}
